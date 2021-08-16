@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}" />
+{% endblock css %} {% block content %}
+<div class="product">
+  <div class="product__id">{{id}}</div>
+  <img src="{{img}}" alt="{{name}}" class="product__img" />
+  <div class="product__info">
+    <h1 class="product__info__name">{{name}}</h1>
+    <p class="product__info__price">{{price}}</p>
+    <input
+      type="number"
+      min="1"
+      max="99"
+      name="quantity"
+      value="1"
+      class="product__quantity"
+    />
+    <input type="submit" value="Add To Cart" class="submit" />
+    <p class="product__info__des">{{des}}</p>
+  </div>
+</div>
+{% endblock content %} {% block js %}
+<script src="{% static 'js/detail.js' %}"></script>
+{% endblock js %}

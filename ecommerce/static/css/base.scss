@@ -1,0 +1,27 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  ul {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}

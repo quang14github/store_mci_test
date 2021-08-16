@@ -1,0 +1,38 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+}
+
+nav ul {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul li:hover {
+  opacity: 0.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+/*# sourceMappingURL=base.css.map */

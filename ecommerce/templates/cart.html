@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}" /> {% endblock css %}
+{% block content %}
+<div class="bar">
+  <p></p>
+  <p class="bar__name">Name</p>
+  <p class="bar__price">Price</p>
+  <p class="bar__quantity">Quantity</p>
+  <p class="bar__cost">Cost</p>
+</div>
+<div class="orders"></div>
+<div class="checkout">
+  <p class="checkout__totalCost">
+    Total cost:
+    <span class="checkout__totalCost__value"></span>
+  </p>
+  <div class="checkout__button">Checkout</div>
+</div>
+<div class="modal hide">
+  <form action="" class="modal__form">
+    <span class="modal__close">X</span>
+    <fieldset>
+      <label for="payment">Choose your payment method:</label>
+      <select name="payment" id="payment">
+        <option value="card">Credit Card</option>
+        <option value="cod">Ship COD</option>
+      </select>
+      <label for="address">Your address:</label>
+      <input
+        type="text"
+        id="address"
+        placeholder="ex: So 1 Dai Co Viet - Hai Ba Trung - Ha Noi"
+      />
+    </fieldset>
+    <input type="submit" class="modal__form__submit" value="Checkout" />
+  </form>
+</div>
+{% endblock content %} {% block js %}
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock js %}

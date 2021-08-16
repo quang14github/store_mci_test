@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/shop.css' %}" /> {% endblock css %}
+{% block content %}
+
+<div>
+  <form action="">
+    <fieldset>
+      <label for="order">Sort By</label>
+      <select name="order" id="order">
+        <option value=""></option>
+        <option value="increase">From low to high price</option>
+        <option value="decrease">From high to low price</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <p>Select category</p>
+      <input type="radio" name="category" value="all" id="all" />
+      <label for="all" class="category__label">All</label>
+      <input type="radio" name="category" value="audio_tech" id="audio_tech" />
+      <label for="audio_tech" class="category__label">Audio Tech</label>
+      <input type="radio" name="category" value="toys" id="toys" />
+      <label for="toys" class="category__label">Toys</label>
+    </fieldset>
+    <input type="submit" value="Filter" />
+  </form>
+</div>
+<div class="products">
+  {% for product in products %}
+  <a href="{{product.id}}">
+    <div class="product">
+      <img src="{{product.img}}" alt="{{product.name}}" />
+      <div class="product__info">
+        <h1 class="product__info__name">{{product.name}}</h1>
+        <p class="product__info__price">{{product.price}}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock content %}

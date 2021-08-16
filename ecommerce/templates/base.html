@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css'  %}" />
+    {% block css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}" class="nav-link" id="home">Home</a></li>
+        <li><a href="{% url 'shop' %}" class="nav-link" id="shop">Shop</a></li>
+        <li><a href="{% url 'cart' %}" class="nav-link" id="cart">Cart</a></li>
+        <li>
+          <a href="{% url 'profile' %}" class="nav-link" id="profile"
+            >Profile</a
+          >
+        </li>
+      </ul>
+    </nav>
+    {% block header %}
+    <!--header place-->
+    {% endblock %}
+    <article class="container">
+      {% block content %}{% endblock content %}
+    </article>
+    {% block js %} {% endblock %}
+    <script src="{% static 'js/base.js' %}"></script>
+  </body>
+</html>

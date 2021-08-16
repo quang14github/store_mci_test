@@ -1,0 +1,42 @@
+.product {
+  padding-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.product__id {
+  display: none;
+}
+
+.product__img {
+  width: 100%;
+}
+
+.product__info {
+  padding: 0 10px;
+}
+
+.product__info__price {
+  color: #cb0000;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.product__info__des {
+  padding-top: 20px;
+}
+
+input[type="number"],
+input[type="submit"] {
+  font-size: 22px;
+  padding: 10px 20px;
+}
+
+input[type="number"] {
+  text-align: center;
+  width: 100px;
+}
+/*# sourceMappingURL=detail.css.map */
