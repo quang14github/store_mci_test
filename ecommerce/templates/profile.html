@@ -1,2 +1,58 @@
-{% extends 'base.html' %} {% load static %}
-{% block css %} <link rel="stylesheet" href="{% static 'css/profile.css' %}"> {% endblock css %} 
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+{% endblock css %} {% block content %}
+
+<div class="user">
+  <div class="authentication">
+    <h1 class="title">Sign In</h1>
+    <form action="" class="signIn__form">
+      <input
+        type="text"
+        id="si_userName"
+        required
+        maxlength="20"
+        value=""
+        placeholder="User Name"
+      />
+      <input
+        type="password"
+        id="si_password"
+        value=""
+        required
+        placeholder="Password"
+      />
+      <input type="submit" class="signIn__form__submit" value="Sign In" />
+      <p class="toSignUp">Register</p>
+    </form>
+    <form action="" class="signUp__form hide">
+      <input
+        type="text"
+        id="su_userName"
+        required
+        maxlength="20"
+        value=""
+        placeholder="User Name"
+      />
+      <input
+        type="password"
+        id="su_password"
+        value=""
+        required
+        placeholder="Password"
+      />
+      <input type="submit" class="signUp__form__submit" value="Sign Up" />
+    </form>
+  </div>
+  <div class="profile hide">
+    <div class="info">
+      <img src="{% static 'media/user.png' %}" alt="" />
+      <p class="userName"></p>
+      <p class="logOut">Log Out</p>
+    </div>
+    <div class="orders">
+    </div>
+  </div>
+</div>
+{% endblock content %} {% block js %}
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock js %}

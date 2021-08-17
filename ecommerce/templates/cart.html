@@ -12,13 +12,13 @@
 <div class="checkout">
   <p class="checkout__totalCost">
     Total cost:
-    <span class="checkout__totalCost__value"></span>
+    <span class="checkout__totalCost__value">0</span>
   </p>
   <div class="checkout__button">Checkout</div>
 </div>
 <div class="modal hide">
   <form action="" class="modal__form">
-    <span class="modal__close">X</span>
+    <span class="modal__close">CloseX</span>
     <fieldset>
       <label for="payment">Choose your payment method:</label>
       <select name="payment" id="payment">
@@ -29,7 +29,10 @@
       <input
         type="text"
         id="address"
+        name="address"
         placeholder="ex: So 1 Dai Co Viet - Hai Ba Trung - Ha Noi"
+        required
+        value=""
       />
     </fieldset>
     <input type="submit" class="modal__form__submit" value="Checkout" />

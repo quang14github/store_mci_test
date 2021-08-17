@@ -1,8 +1,14 @@
+:root {
+  --text-primary: #09597b;
+  --text-secondary: #9fb86f;
+  --text-normal: #838d8f;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #838d8f;
 }
 li {
   list-style-type: none;

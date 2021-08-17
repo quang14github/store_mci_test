@@ -1,9 +1,8 @@
+const currentAccount = localStorage.getItem("currentAccount");
 var product = {};
 product.img = document.querySelector(".product__img").src;
 product.name = document.querySelector(".product__info__name").innerHTML;
-product.price = document
-  .querySelector(".product__info__price")
-  .innerHTML;
+product.price = document.querySelector(".product__info__price").innerHTML;
 quantityInput = document.querySelector(".product__quantity");
 function validQuantityInput() {
   if (!parseInt(quantityInput.value)) {
@@ -14,16 +13,31 @@ function validQuantityInput() {
 }
 quantityInput.addEventListener("input", validQuantityInput);
 quantityInput.addEventListener("keyup", validQuantityInput);
+product.quantity = {};
 product.id = document.querySelector(".product__id").innerHTML;
-product.status = "cart";
 var button = document.querySelector(".submit");
 button.addEventListener("click", () => {
-  product.quantity = document.querySelector(".product__quantity").value;
-  let currQuantity;
-  if (localStorage.getItem(`${product.id}`)) {
-    currQuantity = JSON.parse(localStorage.getItem(`${product.id}`)).quantity;
-    product.quantity = parseInt(currQuantity) + parseInt(product.quantity);
+  if (currentAccount) {
+    product.quantity.cart = document.querySelector(".product__quantity").value;
+    let currQuantity;
+    const user = JSON.parse(localStorage.getItem(currentAccount));
+    const cart = user.cart;
+    const currentProduct = cart.findIndex((e) => e.id == product.id);
+    if (currentProduct != -1) {
+      currQuantity = cart[currentProduct].quantity.cart;
+      cart[currentProduct].quantity.cart =
+        parseInt(currQuantity) + parseInt(product.quantity.cart);
+      product.quantity.cart = cart[currentProduct].quantity.cart;
+    } else {
+      cart.push(product);
+    }
+    localStorage.setItem(
+      currentAccount,
+      JSON.stringify({ ...user, cart: cart })
+    );
+    alert(`You have ${product.quantity.cart} ${product.name} in cart`);
+  } else {
+    alert("You need to sign in!");
+    window.location.assign("http://localhost:8000/profile/");
   }
-  localStorage.setItem(`${product.id}`, JSON.stringify(product));
-  alert(`You have ${product.quantity} ${product.name} in cart`);
 });

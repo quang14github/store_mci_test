@@ -1,4 +1,10 @@
-header {
+#home {
+  color: var(--text-secondary);
+}
+
+.container {
+  max-width: 100%;
+  padding-top: 0;
   background-image: url("../media/header.jpg");
   height: 100vh;
   background-position: center;
@@ -15,16 +21,9 @@ header {
           align-items: center;
 }
 
-header h1 {
+.container h1 {
+  font-size: 40px;
   text-align: center;
-  font-family: "Raleway", sans-serif;
-}
-
-#home {
-  color: turquoise;
-}
-
-.container {
-  padding-top: 0;
+  font-family: sans-serif;
 }
 /*# sourceMappingURL=home.css.map */

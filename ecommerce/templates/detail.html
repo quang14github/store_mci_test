@@ -7,15 +7,17 @@
   <div class="product__info">
     <h1 class="product__info__name">{{name}}</h1>
     <p class="product__info__price">{{price}}</p>
-    <input
-      type="number"
-      min="1"
-      max="99"
-      name="quantity"
-      value="1"
-      class="product__quantity"
-    />
-    <input type="submit" value="Add To Cart" class="submit" />
+    <div class="product__purchase">
+      <input
+        type="number"
+        min="1"
+        max="99"
+        name="quantity"
+        value="1"
+        class="product__quantity"
+      />
+      <input type="submit" value="Add To Cart" class="submit" />
+    </div>
     <p class="product__info__des">{{des}}</p>
   </div>
 </div>

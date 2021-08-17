@@ -1,3 +1,123 @@
 #profile {
-  color: turquoise;
+  color: var(--text-secondary);
+}
+body {
+  background-image: url("../media/profile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.user {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authentication {
+  padding-top: 100px;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+.signIn__form,
+.signUp__form {
+  width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+  height: 30vh;
+  label,
+  input {
+    display: block;
+    font-size: 20px;
+  }
+  input {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+  }
+  input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: turquoise;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.toSignUp {
+  padding-top: 20px;
+  text-decoration: underline;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.profile {
+  padding-top: 50px;
+  align-self: start;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  column-gap: 100px;
+  img {
+    width: 100%;
+  }
+}
+.hide {
+  display: none;
+}
+.info {
+  padding-top: 100px;
+}
+.userName {
+  font-size: 22px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.logOut {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: turquoise;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.orders {
+  border: 1px solid #a1a1a1;
+}
+.order {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 1fr;
+  padding: 15px;
+}
+.order__name {
+  padding-right: 10px;
+}
+.order__img {
+  width: 100%;
+}
+.order__quantity {
+  height: max-content;
+  width: 100%;
+  padding-right: 150px;
+}
+.order__cost {
+  color: #cb0000;
+}
+.order__quantity,
+.order__cost {
+  font-size: 25px;
 }

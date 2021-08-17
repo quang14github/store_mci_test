@@ -1,7 +1,8 @@
 nav {
   position: fixed;
+  z-index: 2;
   width: 100%;
-  background-color: black;
+  background-color: var(--text-primary);
   ul {
     width: 800px;
     margin: 0 auto;
