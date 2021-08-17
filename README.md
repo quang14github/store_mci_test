@@ -1,5 +1,5 @@
 # store_mci_test
-# Ecommerce Web By Django, HTML, SASS, Javascript
+# Ecommerce Web By Django, HTML, SASS, Javascript (Django 3.2.6, Python 3.9.6)
 Use case: </br>
 -Sign Up/Sign In </br>
 -Shopping</br>
